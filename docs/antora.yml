@@ -1,5 +1,5 @@
-name: Demo-B # all files will save using this name (test)
-title: contents- dev #This is web page title (content in web page)
+name: Demo-docs # all files will save using this name (test)
+title: contents-dev #This is web page title (content in web page)
 version: 0.2 #define version (public/test/0.1/all files will save here repo path)
 
 nav:
