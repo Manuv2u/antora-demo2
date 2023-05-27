@@ -1,0 +1,28 @@
+====
+*_INTRODUCTION TO CLOUD COMPUTING_*
+====
+*_BASICS_* +
+-> Cloud computing is a term referred to storing and accessing data over the internet.  +
+-> It doesn’t store any data on the hard disk of personal computer. +
+-> In cloud computing, we can access data from a remote server.
+
+image:https://miro.medium.com/max/640/1*ngkHgQq7ij1NBNr62er3zA.png[] +
+
+*_What is AWS?_* +
+
+-> The full form of AWS is Amazon Web Services. +
+-> Amazon Web Services, Inc. is a subsidiary of Amazon that provides on-demand cloud computing platforms and APIs to individuals, companies, and governments, on a metered pay-as-you-go basis. +
+-> It is a platform that offers flexible, reliable, scalable, easy-to-use and, cost-effective cloud computing solutions. +
+-> AWS is a comprehensive, easy to use computing platform offered Amazon. +
+-> The platform is developed with a combination of infrastructure as a service (IaaS), platform as a service (PaaS) and packaged software as a service (SaaS) offerings. +
+-> The main services provided by the aws is compute,storage,network,database,scaling & loadbalancers.
+
+*_Featues of AWS services:_* +
+
+image:https://static.javatpoint.com/tutorial/aws/images/features-of-aws.png[] +
+
+
+
+*_Services provided by AWS_* +
+
+image:https://www.nicepng.com/png/detail/964-9642294_serverless-services-by-aws-amazon-cloudfront.png[] +

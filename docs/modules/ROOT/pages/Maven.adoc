@@ -1,0 +1,60 @@
+= [YELLOW]#MAVEN#
+
+*_INTRODUCTION:_*
+
+* Maven is a popular open-source build tool that the Apache Group developed for building, publishing, and deploying several projects. +
+
+
+// The Maven project is developed by Apache Software Foundation where it was formerly a part of the Jakarta project. Maven is a powerful build automation tool that is primarily used for Java-based projects. Maven helps you tackle two critical aspects of building software –
+
+
+* It build, test and compile the code and converts code into packaged format(jar/war file). +
+* It describes the dependencies. +
+* Maven prefers convention over configuration. +
+
+*_MAVEN ARCHITECTURE:_*
+
+image:https://www.simplilearn.com/ice9/free_resources_article_thumb/Mavenarchitecture.png[image1] +
+
+*_POM FILE:_* +
+
+* Project Object Model(POM) file is an XML file that contains information related to the project and configuration information such as dependencies, source directory, plugin, goals, etc. used by Maven to build the project. +
+* When you execute a maven command you give maven a POM file to execute the commands. +
+* Maven reads the pom.xml file to accomplish its configuration and operations.
+
+*_SAMPLE POM.XML FILE:_*
+
+image:https://netbeans.apache.org/kb/docs/javaee/images/maven-earpom.png[image2]
+
+Artifacts are stored to the repository, based on the parameters of pom.xml file, +
+
+* Group Id is the unique Id of a group that owns the project. +
+* Artifact Id is the name of the final compilation unit. +
+* Version is the version of the created artifact. SNAPSHOT indicates work in progress. +
+* Packaging could be jar, war or pom depending on your project. +
+
+*_WHEN SHOULD WE USE MAVEN ?_* +
+
+* If there are too many dependencies for the project. +
+* When the dependency version update frequently. +
+* Continuous builds, integration, and testing can be easily handled by using maven. +
+* When one needs an easy way to generate documentation from the source code, compiling the source code, packaging compiled code into JAR files or ZIP files. +
+
+*_MAVEN PHASE:_* +
+A Maven phase is nothing but a stage in the Maven build life cycle.
+Each phase executes a specific task. +
+
+* _validate_ –  This phase checks if all information necessary for the build is available. +
+* _compile_ – This phase compiles the source code. +
+* _test-compile_ – This phase compiles the test source code. +
+* _test_ – This phase runs unit tests. +
+* _package_ – This phase packages compiled source code into the distributable format (jar, war). +
+* _integration-test_ – This phase processes and deploys the package if needed to run integration tests. +
+* _install_ – This phase installs the package to a local repository. +
+* _deploy_ – This phase copies the package to the remote repository. +
+
+
+
+
+
+
