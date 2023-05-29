@@ -1,6 +1,12 @@
 name: Documentation-dev # all files will save using this name (test)
 title: contents-dev #This is web page title (content in web page)
 version: 0.2 #define version (public/test/0.1/all files will save here repo path)
+start_page: Introduction_to_AWS.adoc.adoc
+asciidoc:
+  attributes:
+    source-language: asciidoc@
+    table-caption: false
+
 
 nav:
 - modules/ROOT/nav.adoc
