@@ -1,7 +1,7 @@
 
 *Deployment of master microservice with RDS postgre database instance onto ECS Fargate & access via Load balancer & Route 53* +
 
-==== STEP 1
+=== STEP 1
 
 _From the Gitlab, with the help of CI/CD pipeline the code is build(jar file is created) and tested.
 The artifacts folder will be created while building and jar file is saved inside the target folder on local repository._ +
@@ -12,7 +12,7 @@ The artifacts folder will be created while building and jar file is saved inside
 
 ---
 
-==== STEP 2
+=== STEP 2
 
 _With the help of Dockerfile, the jar file is executed._ +
 
@@ -20,7 +20,7 @@ image::dockerfile.png[title=dockerfile,align="center",width=500]
 
 ---
 
-==== STEP 3
+=== STEP 3
 
 _Gitlab login to AWS console using gitlab-ci.yaml file , through credentials provided in the variables section of CI/CD under Settings._ +
 
@@ -28,7 +28,7 @@ image::gitlab cred.png[title=gitlab variables,align="center",width=500]
 
 ---
 
-==== STEP 4
+=== STEP 4
 
 _The docker image is build, tagged & directly pushed to ECR repository named kbt-md-repo-ecr using ci/cd pipeline._ +
 
@@ -37,7 +37,7 @@ _The docker image is build, tagged & directly pushed to ECR repository named kbt
 
 ---
 
-==== STEP 5
+=== STEP 5
 
 
 _Created a VPC named kbt-md-vpc-aps-dev with CIDR block 10.10.0.0/16_ +
@@ -48,7 +48,7 @@ image::ig.png[title=IGW,align="center",width=500]
 
 ---
 
-==== STEP 6
+=== STEP 6
 
 _Created 6 subnets , 2 public subnet for Web ,2 private subnet for App and 2 private subnet for Postgres database._ +
 
@@ -56,7 +56,7 @@ image::subnets.png[title=subnets,align="center",width=500]
 
 ---
 
-==== STEP 7
+=== STEP 7
 
 _Created a Route table for both private and public subnet._ +
 
@@ -64,7 +64,7 @@ image::rtb.png[title=Route tables,align="center",width=500]
 
 ---
 
-==== STEP 8
+=== STEP 8
 
 _Associate the subnets created with private subnets to private-RT and public subnets to public-RT._ +
 
@@ -74,7 +74,7 @@ image::pubrtb.png[title=subnet association,align="center",width=500]
 
 ---
 
-==== STEP 9
+=== STEP 9
 
 _Created a NAT gateway and associate it with Elastic IP._
 
@@ -87,7 +87,7 @@ _Edit private subnet route by attach it to NAT gateway_
 
 
 
-==== STEP 10
+=== STEP 10
 
 _Amazon ECS is a fully managed container orchestration service that helps you easily deploy, manage, and scale containerized applications._
 
@@ -97,7 +97,7 @@ _Created a cluster named kbt-md-master-cluster._  +
 
 ---
 
-==== STEP 11
+=== STEP 11
 
 _Created a task definition named kbt-md-master-task by adding the container using image uri of repository and specify the port 3030._ +
 
@@ -105,7 +105,7 @@ image::Add-container.png[title=task definition,align="center",width=500]
 
 ---
 
-==== STEP 12
+=== STEP 12
 
 _An Application load balancer is created within our VPC having internet facing scheme._  +
 
@@ -113,7 +113,7 @@ image::lb.png[title=Load balancer creation,align="center",width=500]
 
 ---
 
-==== STEP 13
+=== STEP 13
 
 _Created Application Load balancer resides in the public subnet and The ALB is listening the port HTTP - 80_ +
 
@@ -123,7 +123,7 @@ image::alb-sg.png[title=security groups,align="center",width=500]
 
 ---
 
-==== STEP 14
+=== STEP 14
 
 _The target group for load balancer is created with target type: IP and port as HTTP - 3030._ +
 
@@ -132,7 +132,7 @@ image::alb-sg.png[title=target group creation,align="center",width=500]
 
 ---
 
-==== STEP 15
+=== STEP 15
 
 _The service is created  with a name kbt-md-master-service , for task to run and maintain a specified number of instances of a task definition simultaneously in an Amazon ECS cluster._ +
 
@@ -142,7 +142,7 @@ _Note: If one of your tasks fails or stops, the Amazon ECS service launches anot
 
 ---
 
-==== STEP 16
+=== STEP 16
 
 _Attach the created load balancer with the ECS service & specify the security group as mentioned._ +
 
@@ -150,7 +150,7 @@ image::ecs-sg.png[title=security group for ECS,align="center",width=500]
 
 ---
 
-==== STEP 17
+=== STEP 17
 
 _Go to Route 53 -> click on hosted zones -> select kanilebettu.in -> click on create record_ +
 
@@ -159,7 +159,7 @@ image::route53.png[title=record,align="center",width=500]
 ---
 
 
-==== STEP 18
+=== STEP 18
 
 _Now the service is hosted on master.kanilebettu.in_ +
 
