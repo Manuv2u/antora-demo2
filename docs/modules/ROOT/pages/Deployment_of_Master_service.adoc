@@ -24,7 +24,7 @@ image::dockerfile.png[title=dockerfile,align="center",width=500]
 
 _Gitlab login to AWS console using gitlab-ci.yaml file , through credentials provided in the variables section of CI/CD under Settings._ +
 
-image::/images/gitlab cred.png[title=gitlab variables,align="center",width=500]
+image::images/gitlab cred.png[title=gitlab variables,align="center",width=500]
 
 ---
 
