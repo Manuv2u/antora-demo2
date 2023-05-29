@@ -5,31 +5,31 @@ Run the below command to pull the keycloak image_  +
 
  $ docker pull  quay.io/keycloak/keycloak:latest
 
-image::pullimg.png[title=Docker Image,align="center",width=500]
+image::images/pullimg.png[title=Docker Image,align="center",width=500]
 
 
 _STEP 2: Start keycloak in development mode:_ +
 
  $ docker run --name mykcloak -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:latest start-dev
 
-image::Screenshot_20221213_174141.png[title=Run cmd,align="center",width=500]
+image::images/Screenshot_20221213_174141.png[title=Run cmd,align="center",width=500]
 
 _STEP 3: The container is created for keycloak and it is running in the development mode._ +
 
-image::Screenshot_20221214_141610.png[title=container,align="center",width=500]
+image::images/Screenshot_20221214_141610.png[title=container,align="center",width=500]
 
 
 _STEP 4: The build docker image is pushed to AWS ECR with AWS-CLI commands._ +
 
-image::kc-ecr.png[title=ecr,align="center",width=500]
+image::images/kc-ecr.png[title=ecr,align="center",width=500]
 
 _STEP 5: ECS cluster is created for keycloak after running the above commands._ +
 
 _STEP 6: Create task definition with the following configuration._ +
 
-image::Screenshot_20221214_122450.png[title=entrypoint,align="center",width=500]
+image::images/Screenshot_20221214_122450.png[title=entrypoint,align="center",width=500]
 
-image::Screenshot_20221214_122620.png[title=env,align="center",width=500]
+image::images/Screenshot_20221214_122620.png[title=env,align="center",width=500]
 
 _STEP 6: Run the task within public subnet of VPC +
 For this example, we are using kbt-vpc._ +
@@ -37,4 +37,4 @@ For this example, we are using kbt-vpc._ +
 _STEP 7: Copy and paste the above task <public IP>:8080 in an url.
 You should see the following login page of keycloak._ +
 
-image::Screenshot_20221214_144334.png[title=keycloak,align="center",width=500]
+image::images/Screenshot_20221214_144334.png[title=keycloak,align="center",width=500]
