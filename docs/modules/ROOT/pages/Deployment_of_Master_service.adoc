@@ -16,7 +16,7 @@ The artifacts folder will be created while building and jar file is saved inside
 
 _With the help of Dockerfile, the jar file is executed._ +
 
-image::../images/dockerfile.png[title=dockerfile,align="center",width=500]
+image::/../images/dockerfile.png[title=dockerfile,align="center",width=500]
 
 ---
 
