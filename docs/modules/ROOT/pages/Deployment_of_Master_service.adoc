@@ -16,7 +16,7 @@ The artifacts folder will be created while building and jar file is saved inside
 
 _With the help of Dockerfile, the jar file is executed._ +
 
-image::images/dockerfile.png[title=dockerfile,align="center",width=500]
+image::../images/dockerfile.png[title=dockerfile,align="center",width=500]
 
 ---
 
@@ -24,7 +24,7 @@ image::images/dockerfile.png[title=dockerfile,align="center",width=500]
 
 _Gitlab login to AWS console using gitlab-ci.yaml file , through credentials provided in the variables section of CI/CD under Settings._ +
 
-image::images/gitlab cred.png[title=gitlab variables,align="center",width=500]
+image::../images/gitlab cred.png[title=gitlab variables,align="center",width=500]
 
 ---
 
@@ -33,7 +33,7 @@ image::images/gitlab cred.png[title=gitlab variables,align="center",width=500]
 _The docker image is build, tagged & directly pushed to ECR repository named kbt-md-repo-ecr using ci/cd pipeline._ +
 
 
-//image::images/ecr.png[title=ECR repository,align="center",width=500]
+//image::../images/ecr.png[title=ECR repository,align="center",width=500]
 
 ---
 
