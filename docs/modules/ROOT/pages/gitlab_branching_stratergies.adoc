@@ -7,7 +7,7 @@
 * Feature branches isolate work in progress from the completed work in the main branch.
 * Git branches are inexpensive to create and maintain.
 * Even small fixes and changes should have their own feature branch. +
-image:https://docs.wavemaker.com/learn/assets/branching-model.png[] +
+image:https://docs.wavemaker.com/learn/assets/images/features-branching-280ecc27b8f3e8fb49393e34eb4c37b0.png[] +
 
 2. Merge feature branches into the main branch using pull requests. +
 * The review that takes place in a pull request is critical for improving code quality.
