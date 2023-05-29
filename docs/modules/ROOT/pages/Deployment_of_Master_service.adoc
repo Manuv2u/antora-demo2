@@ -8,7 +8,7 @@ The artifacts folder will be created while building and jar file is saved inside
 
 
 
-//image::jarfile.png[title=jarfile,align="center",width=500]
+image::jarfile.png[title=jarfile,align="center",width=500]
 
 ---
 
@@ -33,7 +33,7 @@ image::images/gitlab cred.png[title=gitlab variables,align="center",width=500]
 _The docker image is build, tagged & directly pushed to ECR repository named kbt-md-repo-ecr using ci/cd pipeline._ +
 
 
-//image::images/ecr.png[title=ECR repository,align="center",width=500]
+image::images/ecr.png[title=ECR repository,align="center",width=500]
 
 ---
 
