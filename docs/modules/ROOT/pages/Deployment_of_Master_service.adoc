@@ -33,7 +33,7 @@ image::images/gitlab cred.png[title=gitlab variables,align="center",width=500]
 _The docker image is build, tagged & directly pushed to ECR repository named kbt-md-repo-ecr using ci/cd pipeline._ +
 
 
-//image::ecr.png[title=ECR repository,align="center",width=500]
+//image::images/ecr.png[title=ECR repository,align="center",width=500]
 
 ---
 
@@ -44,7 +44,7 @@ _Created a VPC named kbt-md-vpc-aps-dev with CIDR block 10.10.0.0/16_ +
 
 _Created an Internet Gateway kbt-md-igw-aps-dev and attach it to VPC created._ +
 
-image::ig.png[title=IGW,align="center",width=500]
+image::images/ig.png[title=IGW,align="center",width=500]
 
 ---
 
@@ -52,7 +52,7 @@ image::ig.png[title=IGW,align="center",width=500]
 
 _Created 6 subnets , 2 public subnet for Web ,2 private subnet for App and 2 private subnet for Postgres database._ +
 
-image::subnets.png[title=subnets,align="center",width=500]
+image::images/subnets.png[title=subnets,align="center",width=500]
 
 ---
 
@@ -60,7 +60,7 @@ image::subnets.png[title=subnets,align="center",width=500]
 
 _Created a Route table for both private and public subnet._ +
 
-image::rtb.png[title=Route tables,align="center",width=500]
+image::images/rtb.png[title=Route tables,align="center",width=500]
 
 ---
 
@@ -70,7 +70,7 @@ _Associate the subnets created with private subnets to private-RT and public sub
 
 _Edit public subnet route by attach it to internet gateway_
 
-image::pubrtb.png[title=subnet association,align="center",width=500]
+image::images/pubrtb.png[title=subnet association,align="center",width=500]
 
 ---
 
@@ -81,7 +81,7 @@ _Created a NAT gateway and associate it with Elastic IP._
 _Edit private subnet route by attach it to NAT gateway_
 
 
-//image::pubrtb.png[title=subnet association,align="center",width=500]
+//image::images/pubrtb.png[title=subnet association,align="center",width=500]
 
 ---
 
@@ -93,7 +93,7 @@ _Amazon ECS is a fully managed container orchestration service that helps you ea
 
 _Created a cluster named kbt-md-master-cluster._  +
 
-//image::cluster.png[title=cluster creation,align="center",width=500]
+//image::images/cluster.png[title=cluster creation,align="center",width=500]
 
 ---
 
@@ -101,7 +101,7 @@ _Created a cluster named kbt-md-master-cluster._  +
 
 _Created a task definition named kbt-md-master-task by adding the container using image uri of repository and specify the port 3030._ +
 
-image::Add-container.png[title=task definition,align="center",width=500]
+image::images/Add-container.png[title=task definition,align="center",width=500]
 
 ---
 
@@ -109,7 +109,7 @@ image::Add-container.png[title=task definition,align="center",width=500]
 
 _An Application load balancer is created within our VPC having internet facing scheme._  +
 
-image::lb.png[title=Load balancer creation,align="center",width=500]
+image::images/lb.png[title=Load balancer creation,align="center",width=500]
 
 ---
 
@@ -119,7 +119,7 @@ _Created Application Load balancer resides in the public subnet and The ALB is l
 
 _ALB follows the security group as,_ +
 
-image::alb-sg.png[title=security groups,align="center",width=500]
+image::images/alb-sg.png[title=security groups,align="center",width=500]
 
 ---
 
@@ -128,7 +128,7 @@ image::alb-sg.png[title=security groups,align="center",width=500]
 _The target group for load balancer is created with target type: IP and port as HTTP - 3030._ +
 
 
-image::alb-sg.png[title=target group creation,align="center",width=500]
+image::images/alb-sg.png[title=target group creation,align="center",width=500]
 
 ---
 
@@ -138,7 +138,7 @@ _The service is created  with a name kbt-md-master-service , for task to run and
 
 _Note: If one of your tasks fails or stops, the Amazon ECS service launches another instance of your task definition to replace it._ +
 
-//image::service.png[title=service creation,align="center",width=500]
+//image::images/service.png[title=service creation,align="center",width=500]
 
 ---
 
@@ -146,7 +146,7 @@ _Note: If one of your tasks fails or stops, the Amazon ECS service launches anot
 
 _Attach the created load balancer with the ECS service & specify the security group as mentioned._ +
 
-image::ecs-sg.png[title=security group for ECS,align="center",width=500]
+image::images/ecs-sg.png[title=security group for ECS,align="center",width=500]
 
 ---
 
@@ -154,7 +154,7 @@ image::ecs-sg.png[title=security group for ECS,align="center",width=500]
 
 _Go to Route 53 -> click on hosted zones -> select kanilebettu.in -> click on create record_ +
 
-image::route53.png[title=record,align="center",width=500]
+image::images/route53.png[title=record,align="center",width=500]
 
 ---
 
@@ -163,7 +163,7 @@ image::route53.png[title=record,align="center",width=500]
 
 _Now the service is hosted on master.kanilebettu.in_ +
 
-image::master.png[title=master service,align="center",width=500]
+image::images/master.png[title=master service,align="center",width=500]
 
 
 
