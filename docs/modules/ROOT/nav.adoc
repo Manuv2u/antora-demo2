@@ -1,6 +1,5 @@
 * xref:Deployment_of_Master_service.adoc[Deployment_of_Master_service]
 * xref:gitlab_branching_stratergies.adoc[gitlab_branching_stratergies]
-* xref:inline_text_formate.adoc[inline_text_formate]
 * xref:introduction_to_AWS.adoc[introduction_to_AWS]
 * xref:Keyclock_Public_subnet_H2_database.adoc[Keyclock_Public_subnet_H2_database]
 * xref:Maven.adoc[Maven]
