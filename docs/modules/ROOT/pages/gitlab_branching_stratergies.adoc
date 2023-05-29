@@ -14,7 +14,7 @@ image:https://docs.wavemaker.com/learn/assets/images/features-branching-280ecc27
 * Only merge branches through pull requests that pass your review process.
 * Avoid merging branches to the main branch without a pull request.
 
-image:https://1.bp.blogspot.com/-lV4UskUfYPo/Xzm_TGK38JI/AAAAAAAAC9I/kH4JTZhnu-YMv2lpwVORg_XCiFirXkOTQCLcBGAsYHQ/s912/feature-branching-ozkary.png[]
+image:https://1.bp.blogspot.com/-lV4UskUfYPo/Xzm_TGK38JI/AAAAAAAAC9I/kH4JTZhnu-YMv2lpwVORg_XCiFirXkOTQCLcBGAsYHQ/s912/feature-branching-ozkary.png[] +
 
 . Keep a high quality, up-to-date main branch. +
 * The code in your main branch should pass tests, build cleanly, and always be current.
